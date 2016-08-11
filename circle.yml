@@ -9,6 +9,7 @@ machine:
     circlehost: 127.0.0.1
     localhost: 127.0.0.1
   pre:
+    - echo "DOCKER_VERSION $DOCKER_VERSION"
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | sudo bash -s -- $DOCKER_VERSION
   services:
     - docker
